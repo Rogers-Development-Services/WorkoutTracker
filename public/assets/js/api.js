@@ -1,4 +1,6 @@
 const API = {
+
+  // --- This fetches the url information pertaining to all my workout plans
   async getLastWorkout() {
     let res;
     try {
@@ -8,7 +10,7 @@ const API = {
     }
     const json = await res.json();
 
-    return json[json.length - 1];
+    return json[json.length - 1]; // last workout in the array
   },
   async addExercise(data) {
     const id = location.search.split("=")[1];
@@ -35,6 +37,7 @@ const API = {
     return json;
   },
 
+// --- this fetches the workout information for stats.html
   async getWorkoutsInRange() {
     const res = await fetch(`/api/workouts/range`);
     const json = await res.json();

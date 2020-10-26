@@ -1,6 +1,8 @@
 async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);
+
+  // if lastworkout exsits define the href attribute of the <a> to navigate towards exercise.hmtl, and give the url the most recently submitted workout the id from mongo.
   if (lastWorkout) {
     document
       .querySelector("a[href='/exercise?']")
@@ -8,17 +10,20 @@ async function initWorkout() {
 
     const workoutSummary = {
       date: formatDate(lastWorkout.day),
-      totalDuration: lastWorkout.totalDuration,
+      totalDuration: lastWorkout.totalDuration, //why is this undefined?
       numExercises: lastWorkout.exercises.length,
       ...tallyExercises(lastWorkout.exercises)
     };
 
     renderWorkoutSummary(workoutSummary);
+
+    // if not alert the user they can only create a new workout
   } else {
     renderNoWorkoutText()
   }
 }
-
+ 
+// when the .workout-stats div is rendered add information about the specific exercises preformed
 function tallyExercises(exercises) {
   const tallied = exercises.reduce((acc, curr) => {
     if (curr.type === "resistance") {
@@ -44,6 +49,7 @@ function formatDate(date) {
   return new Date(date).toLocaleDateString(options);
 }
 
+// This renders the .workout-stats div
 function renderWorkoutSummary(summary) {
   const container = document.querySelector(".workout-stats");
 

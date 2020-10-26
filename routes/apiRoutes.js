@@ -25,6 +25,11 @@ module.exports = function (app) {
                 response.json(error);
             })
     });
+
+    // --- Create a new WorkoutPlan ---
+    app.post("/");
+
+
 }
 
     // --- Creating Test WorkoutPlan ---
