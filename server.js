@@ -17,7 +17,21 @@ app.use(express.static("public/views")); // This imports the views/html
 require("./routes/htmlRoutes")(app);
 require("./routes/apiRoutes")(app);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDB", { useNewUrlParser: true });
+// --- Use the following for Local Storage in MongoDB
+
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDB", { useNewUrlParser: true });
+
+// --- Use for MongoDB Atlas Storage
+
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/workoutsDB',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
