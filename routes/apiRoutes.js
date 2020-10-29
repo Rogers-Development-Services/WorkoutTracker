@@ -47,10 +47,10 @@ module.exports = function (app) {
     // });
 
     app.post("/api/workouts", function (request, response) {
-        console.log("Creating new workout: \n", response.body);
-        db.Exercises.create({})
+        console.log("------------------------Creating new workout: \n", response.body);
+        db.WorkoutPlan.create({})
             .then(function (dbWorkout) {
-                console.log("Here is the new workout: \n", dbWorkout);
+                console.log("--------------------Here is the new workout: \n", dbWorkout);
                 response.json(dbWorkout);
             })
             .catch(function (error) {
@@ -62,7 +62,7 @@ module.exports = function (app) {
 
     app.put("/api/workouts/:id", function (request, response) {
         console.log("-----------------------------------------Put Request for updating old workoutPlan: \n", request.body); // why is this request?
-        console.log("-----------------------------------------Here's the id were are updating: \n", request.params);
+        console.log("-----------------------------------------Here's the id were are updating in the PUT Request: \n", request.params);
         db.WorkoutPlan.findByIdAndUpdate(
             request.params.id,
             { $push: { exercises: request.body } },
@@ -77,13 +77,3 @@ module.exports = function (app) {
     });
 
 }
-
-    // --- Creating Test WorkoutPlan ---
-
-    // db.WorkoutPlan.create({ name: "Matt's Test Workout"})
-    // .then(dbWorkoutPlan => {
-    //     console.log("Workout Plan Created: ", dbWorkoutPlan);
-    // })
-    // .catch(({ message}) => {
-    //     console.log(message);
-    // })
