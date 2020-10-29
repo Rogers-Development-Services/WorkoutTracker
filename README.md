@@ -6,8 +6,6 @@
 
 This Heroku DB application wil create a workout tracker with MongoDB, Node.JS, Express, and Mongoose. (It is designed via the MVC design pattern)
 
-Here is the [deployed application](https://secret-spire-56494.herokuapp.com/).
-
 ## Table of Contents
 [Deployed Application](https://github.com/Rogers-Development-Services/Workout-Tracker#deployed-application)
 
@@ -29,9 +27,7 @@ Here is the [deployed application](https://secret-spire-56494.herokuapp.com/).
 
 ## Deployed Application
 
-Here is an example of our app in action: 
-
-![Workout-Tracker!](./public/assets/img/burger.gif)
+Here is the [deployed application](https://secret-spire-56494.herokuapp.com/).
 
 ## Installation
 
