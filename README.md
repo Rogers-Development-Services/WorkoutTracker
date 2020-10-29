@@ -63,6 +63,8 @@ Note: When adding and completing exercises on Heroku, you may experience some la
 
 ### Screenshots
 
+![Deployed Application1](https://user-images.githubusercontent.com/38272211/97619105-09ee2180-19dd-11eb-8ba9-b8fda290c0e7.JPG)
+
 ![Deployed Application](https://user-images.githubusercontent.com/38272211/97612929-4453c080-19d5-11eb-8474-c7a4891e46b7.JPG)
 
 ## Testing
