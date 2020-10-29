@@ -1,57 +1,106 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Workout-Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+![License: MIT](https://img.shields.io/badge/license-MIT%20License-blue.svg) </br>
+![badge: Made With-JavaScript](https://img.shields.io/badge/Made%20With-JavaScript-Yellow) ![badge: Made With-CSS3](https://img.shields.io/badge/Made%20With-CSS3-Yellow) ![badge: Made With-HTML5](https://img.shields.io/badge/Made%20With-HTML5-Yellow) </br>
+![badge: Uses-mongoDB](https://img.shields.io/badge/Uses-mongoDB-red) ![badge: Uses-mongoose](https://img.shields.io/badge/Uses-mongoose-red) ![badge: Uses-morgan](https://img.shields.io/badge/Uses-morgan-orange) ![badge: Uses-Canvas](https://img.shields.io/badge/Uses-Canvas-orange) ![badge: Uses-Node.JS](https://img.shields.io/badge/Uses-Node.JS-orange)</br>
 
-## User Story
+This Heroku DB application wil create a workout tracker with MongoDB, Node.JS, Express, and Mongoose. (It is designed via the MVC design pattern)
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+Here is the [deployed application](https://secret-spire-56494.herokuapp.com/).
 
-## Business Context
+## Table of Contents
+[Deployed Application](https://github.com/Rogers-Development-Services/Workout-Tracker#deployed-application)
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+[Installation](https://github.com/Rogers-Development-Services/Workout-Tracker#installation)
 
-## Acceptance Criteria
+[Usage](https://github.com/Rogers-Development-Services/Workout-Tracker#usage)
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+[Screenshots](https://github.com/Rogers-Development-Services/Workout-Tracker#screenshots)
 
-The user should be able to:
+[Testing](https://github.com/Rogers-Development-Services/Workout-Tracker#testing)
 
-  * Add exercises to a previous workout plan.
+[Future Updates](https://github.com/Rogers-Development-Services/Workout-Tracker#future-updates)
 
-  * Add new exercises to a new workout plan.
+[Questions](https://github.com/Rogers-Development-Services/Workout-Tracker#questions)
 
-  * View the combined weight of multiple exercises on the `stats` page.
+[Credits](https://github.com/Rogers-Development-Services/Workout-Tracker#credits)
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+[License](https://github.com/Rogers-Development-Services/Workout-Tracker#license)
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+## Deployed Application
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+Here is an example of our app in action: 
 
-## Commit Early and Often
+![Workout-Tracker!](./public/assets/img/burger.gif)
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+## Installation
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+Download this package, open your command line interface and run npm install. This should install the following dependencies aswell: Express, mongoose, path, and morgan. If for some reason, you need to install the dependencies individually run npm install "dependency_name".
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+Next run the following command to install the app: 
 
-Follow these guidelines for committing:
+```bash
+npm install 
+```
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+```bash
+npm install express
+```
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+Note: This app is run on a Heroku server, it is not necessary to download.
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+## Usage 
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+If you have downloaded the repository and have cloned the package to your machine, and have installed all dependencies, begin by typing "npm run watch". 
 
-We want you to have well over 200 commits by graduation, so commit early and often!
+```bash
+npm run watch 
+```
 
-## Submission on BCS
+When you start the application, you will only be given the option to add a new workout. When you click on the green button you'll be promopted to add a workout type of resistance or cardio. Then you'll be able to fill in the details of your workout routine and have the otion to either add the exercise or complete it. If you choose to add the exercise, it will be added to your current workout and the total weight and duration of every exercise will be added together and displayed on your fitness tracker dashboard.
 
-You are required to submit the following:
+Similarly, if you choose to continue your current workout by pressing the blue button on the dashboard you will be given the same options to either complete the exercise you're currently working towards or add a new exercise for your current workout.
 
-* The URL to the deployed application
+Lastly, you can see the combined information of your total workouts this week by clicking on the Dashboard link in the upper left hand corner.
 
-* The URL to the GitHub repository
+Note: When adding and completing exercises on Heroku, you may experience some lag time before being alerted that your exercise has successfully been added.
+
+### Screenshots
+
+![Deployed Application](https://user-images.githubusercontent.com/38272211/97612929-4453c080-19d5-11eb-8474-c7a4891e46b7.JPG)
+
+## Testing
+
+Testing Instructions: Currently, there are no written tests for this application, but if you wish to write your, change the scripts property in package json file.
+
+```bash
+npm install jest
+```
+
+```bash
+npm test
+```
+
+## Future Updates
+This application is a work in progress, future updates will include: 
+1. Set up Database with two collections for exercises and workouts refrencing them together using mongoose's .populate() method.
+
+## Questions
+
+Share with us with any comments or questions to help us grow! 
+
+GitHub Profile: 
+[Rogers-Development-Services](https://www.github.com/Rogers-Development-Services) | [Portfolio](https://rogers-development-services.github.io/Portfolio/index.html)
+
+
+Email: 
+[matthew.shane.rogers@gmail.com](matthew.shane.rogers@gmail.com)
+
+## Credits
+
+Code template provided by Trilogy Education 
+
+Thanks to [Plover Brown](https://github.com/rebgrasshopper), [Mando Estrada](https://github.com/Mando619), and [Chris Stead](https://github.com/cmstead) for troubleshooting and debugging assistance.
+
+## Licenses
+Licensed under the MIT License lincense.

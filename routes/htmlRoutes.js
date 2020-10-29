@@ -5,7 +5,7 @@ module.exports = function (app) {
         response.sendFile(path.join(__dirname, "../public/views/exercise.html"));
     });
 
-    app.get("/stats", function(request, response) {
+    app.get("/stats", function (request, response) {
         response.sendFile(path.join(__dirname, "../public/views/stats.html"));
     });
 

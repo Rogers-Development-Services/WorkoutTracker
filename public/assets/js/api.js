@@ -37,7 +37,7 @@ const API = {
     return json;
   },
 
-// --- this fetches the workout information for stats.html
+  // --- this fetches the workout information for stats.html
   async getWorkoutsInRange() {
     const res = await fetch(`/api/workouts/range`);
     const json = await res.json();
