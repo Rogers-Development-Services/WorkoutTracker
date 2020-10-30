@@ -22,7 +22,7 @@ const API = {
     });
 
     const json = await res.json();
-
+    console.log("-------------", json);
     return json;
   },
   async createWorkout(data = {}) {

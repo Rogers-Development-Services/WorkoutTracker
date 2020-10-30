@@ -19,19 +19,19 @@ require("./routes/apiRoutes")(app);
 
 // --- Use the following for Local Storage in MongoDB
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDB", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDB", { useNewUrlParser: true });
 
 // --- Use for MongoDB Atlas Storage
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/workoutsDB',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  }
-);
+// mongoose.connect(
+//   process.env.MONGODB_URI || 'mongodb://localhost/workoutsDB',
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useCreateIndex: true,
+//     useFindAndModify: false
+//   }
+// );
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);

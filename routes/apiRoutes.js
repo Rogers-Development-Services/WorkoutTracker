@@ -36,7 +36,7 @@ module.exports = function (app) {
         // console.log("------------------------Creating new workout: \n", response.body);
         db.WorkoutPlan.create({})
             .then(function (dbWorkout) {
-                // console.log("--------------------Here is the new workout: \n", dbWorkout);
+                console.log("--------------------Here is the new workout: \n", dbWorkout);
                 response.json(dbWorkout);
             })
             .catch(function (error) {
